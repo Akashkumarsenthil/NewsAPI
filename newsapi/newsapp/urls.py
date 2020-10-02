@@ -8,6 +8,4 @@ urlpatterns = [
     path('apple/', views.apple),
     path('techcrunch/', views.techcrunch),
     path('wallstreet', views.wallstreet),
-
-
 ]
