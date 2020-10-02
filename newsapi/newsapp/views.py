@@ -27,3 +27,8 @@ def techcrunch(request):
     techcrunch = requests.get('https://newsapi.org/v2/everything?domains=techcrunch.com,thenextweb.com&apiKey=e60ee0c37594499aa36b7027cdb262f1')
     techcrunch_api = json.loads(techcrunch.content)
     return render(request, 'blockchain.html', {'api': techcrunch_api})
+
+def wallstreet(request):
+    wallstreet = requests.get('http://newsapi.org/v2/everything?domains=wsj.com&apiKey=e60ee0c37594499aa36b7027cdb262f1')
+    wallstreet_api = json.loads(wallstreet.content)
+    return render(request, 'wallstreet.html', {'api': wallstreet_api})
